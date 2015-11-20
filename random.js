@@ -1,0 +1,13 @@
+var steps = 2;
+var stepsLeft = '[' + steps + ' steps left]';
+var input1 = prompt('Please type in a number: ' + stepsLeft);
+steps -= 1;
+stepsLeft = '[' + steps + ' steps left]';
+var firstNumber = parseInt(input1);
+var input2 = prompt('Please type another number: ' + stepsLeft);
+steps -= 1;
+stepsLeft = '[' + steps + ' steps left]';
+var secondNumber = parseInt(input2);
+var randomNumber = Math.floor(Math.random() * (secondNumber - firstNumber + 1)) + firstNumber;
+var message = '<p>' + randomNumber + ' is a number between ' + firstNumber + ' and ' + secondNumber + '.</p>';
+document.write(message);
